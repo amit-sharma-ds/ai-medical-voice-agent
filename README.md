@@ -2,7 +2,7 @@
 
 AI Medical Voice Agent is a voice-based healthcare assistant that helps users describe symptoms using speech and get basic medical guidance. It simplifies access to healthcare through conversational AI and modern web technologies.
 
-!()[https://github.com/amit-sharma-ds/ai-medical-voice-agent/blob/main/Image/Screenshot%202025-07-13%20121041.png]
+![](https://github.com/amit-sharma-ds/ai-medical-voice-agent/blob/main/Image/Screenshot%202025-07-13%20121041.png)
 ---
 
 ## 🚀 Tech Stack
