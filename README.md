@@ -41,3 +41,8 @@ git clone https://github.com/amit-sharma-ds/ai-medical-voice-agent
 cd ai-medical-voice-agent
 npm install
 npm run dev
+```
+
+## Images
+
+![landing screen](https://github.com/amit-sharma-ds/ai-medical-voice-agent/blob/main/Image/Screenshot%202025-07-13%20120942.png)
