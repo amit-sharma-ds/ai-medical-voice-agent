@@ -12,15 +12,17 @@ import {
 } from "@/components/ui/dialog"
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
-import { ArrowRight, Notebook, Router } from 'lucide-react'
-import axios from 'axios';
+import { ArrowRight } from 'lucide-react' 
+import axios from 'axios'
+
 function AddNewSessionDialog() {
-  const [note,setNote]=useState <string> ();
-  const [loading,setLoading]=useState(false);
-  const OnClickNext=async ()=>{
+  const [note, setNote] = useState<string>();
+  const [loading, setLoading] = useState(false);
+
+  const OnClickNext = async () => {
     setLoading(true);
-    const result=await axios.post('/api/suggest-doctors',{
-      notes:note
+    const result = await axios.post('/api/suggest-doctors', {
+      notes: note
     });
 
     console.log(result.data);
@@ -38,19 +40,22 @@ function AddNewSessionDialog() {
           <DialogDescription asChild>
             <div>
               <h2>Add Symptoms or Any Other Details</h2>
-              <Textarea placeholder='Add Detail here...' 
-              className='h-[200px] mt-1'
-              onChange={(e)=>setNote(e.target.value)}/>
+              <Textarea 
+                placeholder='Add Detail here...' 
+                className='h-[200px] mt-1'
+                onChange={(e) => setNote(e.target.value)}
+              />
             </div>
           </DialogDescription>
         </DialogHeader>
         <DialogFooter>
-          <DialogClose>
-            
-            <Button variant={'outline'}>Cancel</Button>
+          <DialogClose asChild>
+            <Button variant="outline">Cancel</Button>
           </DialogClose>
 
-          <Button disabled={!note} onClick={() => OnClickNext()}>Next <ArrowRight /> </Button>
+          <Button disabled={!note} onClick={() => OnClickNext()}>
+            Next <ArrowRight />
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
@@ -58,7 +63,3 @@ function AddNewSessionDialog() {
 }
 
 export default AddNewSessionDialog
-
-
-
-  
